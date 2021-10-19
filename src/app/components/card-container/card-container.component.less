@@ -1,0 +1,29 @@
+:host {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;
+
+        ::ng-deep {
+            app-card{
+                .card:not(:last-child) {
+                    margin-right: 0;
+                }
+    
+                .card:not(.highlight-card) {
+                    cursor: pointer;
+                }
+    
+                .card:not(.highlight-card):hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+                }
+    
+                .card:not(.highlight-card):hover .material-icons path {
+                    fill: rgb(105, 103, 103);
+                }
+            }
+        }
+    }
+}
