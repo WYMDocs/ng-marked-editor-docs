@@ -1,3 +1,4 @@
+import { Overlay } from '@angular/cdk/overlay';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,7 +33,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HttpClientModule
   ],
   providers: [
-    
+    Overlay
   ],
   bootstrap: [AppComponent]
 })
