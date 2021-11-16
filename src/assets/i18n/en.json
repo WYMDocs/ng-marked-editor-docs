@@ -1,3 +1,8 @@
 {
-    "HELLO": "hello"
+    "HELLO": "hello",
+    "HOME": "Home",
+    "EXAMPLE": "Example",
+    "SOURCECODE": "Scource Code",
+    "ABOUT": "About",
+    "DOCS": "Document"
 }

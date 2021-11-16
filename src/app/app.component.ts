@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LocalstorageService } from './localstorage.service';
 
@@ -14,7 +15,8 @@ export class AppComponent implements OnInit {
   param = { value: 'world' };
   constructor(
     private ls: LocalstorageService,
-    translate: TranslateService
+    translate: TranslateService,
+    private router: Router
   ) {
     const value = this.ls.getText(this.rootVar);
     document.documentElement.style.setProperty(this.rootVar, value);
@@ -48,5 +50,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateSvgColor(this.value);
+  }
+
+  jumpto(target): void {
+    this.router.navigate(['pages' , target]);
   }
 }

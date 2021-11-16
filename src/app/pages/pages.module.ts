@@ -4,10 +4,18 @@ import { HomeComponent } from './home/home.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { NgMarkedEditorModule } from 'ng-marked-editor';
 import { NgMarkedPreviewModule} from 'ng-marked-preview';
+import { DocsComponent } from './docs/docs.component';
+import { ExampleComponent } from './example/example.component';
+import { SourceCodeComponent } from './source-code/source-code.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    DocsComponent,
+    ExampleComponent,
+    SourceCodeComponent,
+    AboutComponent,
   ],
   imports: [
     CommonModule,
