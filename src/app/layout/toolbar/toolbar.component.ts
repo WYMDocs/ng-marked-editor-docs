@@ -14,8 +14,8 @@ export class ToolbarComponent implements OnInit {
   @ViewChild('colorTpl')
   colorRef: ElementRef;
   rootVar = '--main-theme-color';
-  local = { name: '中文简体', value: 'zh-cn' };
-  locals = [{ name: 'EN', value: 'en' }, { name: '中文简体', value: 'zh-cn' }];
+  local = { name: 'EN', value: 'zh-cn' };
+  locals = [{ name: '中文简体', value: 'en' }, { name: 'EN', value: 'zh-cn' }];
   constructor(
     private cdk: ChangeDetectorRef,
     private localStorageService: LocalstorageService,
