@@ -9,6 +9,7 @@ import { NgMarkedEditorOption } from 'ng-marked-editor/lib/types/editor';
 })
 export class HomeComponent implements OnInit {
 
+  theme = 'default';
   option: NgMarkedEditorOption = {
     saveOption: {
       autoSave: true
@@ -22,9 +23,13 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.http.get('assets/docs/home.md?' ,  { responseType: 'text' }).subscribe( (e) => {
+    this.http.get('assets/docs/home.md?', { responseType: 'text' }).subscribe((e) => {
       this.docContext = e || '';
     });
+  }
+
+  switchTheme(theme): void {
+    this.theme = theme;
   }
 
 }

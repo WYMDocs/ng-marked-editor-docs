@@ -1,1 +1,16 @@
-<p>example works!</p>
+<section>
+    <div class="content">
+        <lib-ng-marked-preview #previewElm [context]="docContext"></lib-ng-marked-preview>
+    </div>
+</section>
+
+<section class="tips">
+    <ul>
+        <ng-container *ngFor="let toc of topList;let i = index">
+            <li #tocItem title="{{toc.title}}" class="{{toc.localName}}"
+                [class.secondary]="type === 'EmbeddedExpandable' && i >= primaryMax" [class.active]="i === activeIndex">
+                <a (click)="scrollto($event , toc.id , i)" [href]="'#' + toc.id">{{toc.id}}</a>
+            </li>
+        </ng-container>
+    </ul>
+</section>

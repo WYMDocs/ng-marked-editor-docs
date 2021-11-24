@@ -1,10 +1,16 @@
 <section>
     <div class="toolbars">
-        
+        <span class="tool-bar" (click)="switchTheme('dark')">
+            暗黑主题
+        </span>
+        &nbsp;
+        <span class="tool-bar" (click)="switchTheme('default')">
+            亮色主题
+        </span>
     </div>
 </section>
 <section>
     <div class="content">
-        <lib-ng-marked-editor [option]="option"></lib-ng-marked-editor>
+        <lib-ng-marked-editor [theme]="theme" [value]="docContext" [option]="option"></lib-ng-marked-editor>
     </div>
 </section>

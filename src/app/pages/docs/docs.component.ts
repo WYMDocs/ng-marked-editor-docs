@@ -9,13 +9,18 @@ import { NgMarkedPreviewComponent } from 'ng-marked-preview';
 })
 export class DocsComponent implements OnInit {
 
+  ddd = 1212;
   docContext?;
+  activeIndex = 0;
   previewRefElm: NgMarkedPreviewComponent;
+  topList: any[] = [];
   @ViewChild('previewElm', { static: false })
   set previewRef(e: NgMarkedPreviewComponent) {
     this.previewRefElm = e;
     if (e) {
-      this.getHeaders();
+      setTimeout(() => {
+        this.getHeaders();
+      }, 1000);
     }
   }
 
@@ -34,6 +39,19 @@ export class DocsComponent implements OnInit {
   }
 
   getHeaders(): void {
-    console.log(this.previewRef);
+    const elm = (this.previewRef as any).elm.nativeElement.children[0];
+    const headings = elm.querySelectorAll('h1,h2,h3');
+    const skipNoTocHeadings = (heading: HTMLHeadingElement) => !/(?:no-toc|notoc)/i.test(heading.className);
+    const res = Array.prototype.filter.call(headings, skipNoTocHeadings);
+    this.topList = res || [];
+  }
+
+  scrollto($event: Event , id: string , index): void {
+    $event.stopPropagation();
+    $event.preventDefault();
+    const elm = (this.previewRef as any).elm.nativeElement.children[0];
+    const selected = elm.querySelector(`#${id}`);
+    selected.scrollIntoView();
+    this.activeIndex = index;
   }
 }

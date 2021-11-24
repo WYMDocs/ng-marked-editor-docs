@@ -3,8 +3,11 @@
 </section>
 <section class="tips">
     <ul>
-        <li>
-
-        </li>
+        <ng-container *ngFor="let toc of topList;let i = index">
+            <li #tocItem title="{{toc.title}}" class="{{toc.localName}}"
+                [class.secondary]="type === 'EmbeddedExpandable' && i >= primaryMax" [class.active]="i === activeIndex">
+                <a (click)="scrollto($event , toc.id , i)" [href]="'#' + toc.id">{{toc.id}}</a>
+            </li>
+        </ng-container>
     </ul>
 </section>

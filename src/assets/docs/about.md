@@ -6,7 +6,7 @@ Markdown 编辑器，Angular 版本，使用 RxJs  和 typescript 语法开发�
 
 - react 版本，[md-editor-rt](https://github.com/imzbf/md-editor-rt)，更新比较缓慢（作者有点忙）
 - Vue3 版本，[md-editor-v3](https://imzbf.github.io/md-editor-v3)
-
+- 两个版本的作者博客[点击进入](https://imbf.cc/message)
 # 反馈联系
 
 1. 邮箱: [2693822836@qq.com](2693822836@qq.com)

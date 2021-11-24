@@ -2,8 +2,67 @@
     position: relative;
 
     .tips {
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 125px;
         transform: translate(-100%);
+        width: 200px;
+        right: -3em;
+        display: flex;
+
+        &::before {
+            content: '';
+            border-left: 1px solid gainsboro;
+        }
+
+        ul {
+            font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                box-sizing: border-box;
+                font-size: 12px;
+                line-height: 16px;
+                padding: 3px 0 3px 12px;
+                position: relative;
+                transition: all .3s ease-in-out;
+
+                &.h1{
+                    
+                }
+                &.h2{
+                    padding-left: 1.8em;
+                }
+                &.h3{
+                    padding-left: 2.4em;
+                }
+                a {
+                    font-size: inherit;
+                    color: var(--main-theme-color);
+                    overflow: visible;
+                    font-size: 12px;
+                    display: table-cell;
+                }
+
+                &.active {
+                    a {
+                        color: var(--main-theme-color);;
+                        font-weight: 500;
+
+                        &::before {
+                            content: "";
+                            border-radius: 50%;
+                            left: -3px;
+                            top: 12px;
+                            background: var(--main-theme-color);;
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

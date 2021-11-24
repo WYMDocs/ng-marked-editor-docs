@@ -3,5 +3,22 @@
     display: block;
     section{
         margin: 16px 0;
+        .toolbars {
+            .tool-bar{
+                border: 1px solid var(--main-theme-color);
+                border-radius: 5px;
+                padding: 6px 12px;
+                cursor: pointer;
+                &:hover{
+                    background: lighten(#000 , 80%);
+                    color: lighten(#fff , 80%);
+                    box-shadow: 1px 5px 5px lighten(#000 , 80%);
+                }
+            }
+        }
+    }
+
+    .content{
+        height: 520px;
     }
 }
