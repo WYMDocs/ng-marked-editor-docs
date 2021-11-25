@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.http.get('assets/docs/about.md?' ,  { responseType: 'text' }).subscribe( (e) => {
+    this.http.get('./assets/docs/about.md?' ,  { responseType: 'text' }).subscribe( (e) => {
       this.docContext = e || '';
     });
   }

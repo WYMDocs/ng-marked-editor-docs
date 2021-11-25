@@ -39,7 +39,7 @@ export class ExampleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.http.get('assets/docs/example.md?', { responseType: 'text' }).subscribe((e) => {
+    this.http.get('./assets/docs/example.md?', { responseType: 'text' }).subscribe((e) => {
       this.docContext = e || '';
     });
   }

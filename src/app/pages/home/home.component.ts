@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.http.get('assets/docs/home.md?', { responseType: 'text' }).subscribe((e) => {
+    this.http.get('./assets/docs/home.md?', { responseType: 'text' }).subscribe((e) => {
       this.docContext = e || '';
     });
   }

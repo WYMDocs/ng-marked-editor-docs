@@ -15,7 +15,7 @@ export class SourceCodeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.http.get('assets/docs/sourceCode.md?', { responseType: 'text' }).subscribe((e) => {
+    this.http.get('./assets/docs/sourceCode.md?', { responseType: 'text' }).subscribe((e) => {
       this.docContext = e || '';
     });
   }
