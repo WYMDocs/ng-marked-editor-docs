@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ docs ]
+    branches: [ main ]
   pull_request:
-    branches: [ docs ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,6 +38,6 @@ jobs:
       - name: publish
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: docs
+          branch: main
           folder: dist/browser
-          target-folder: docs
+          target-folder: main
