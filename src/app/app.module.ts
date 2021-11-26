@@ -13,7 +13,7 @@ import { ComponentsModule } from './components/components.module';
 import { LayoutModule } from './layout/layout.module';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http , './assets/i18n/' , '.json');
 }
 @NgModule({
   declarations: [
