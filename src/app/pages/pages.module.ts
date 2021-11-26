@@ -20,6 +20,9 @@ import { AboutComponent } from './about/about.component';
     CommonModule,
     PagesRoutingModule,
     NgMarkedEditorModule
+  ],
+  exports: [
+    NgMarkedEditorModule
   ]
 })
 export class PagesModule { }

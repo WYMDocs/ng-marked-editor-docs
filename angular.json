@@ -31,7 +31,38 @@
               "src/styles.less",
               "src/styles/var.css"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "./node_modules/marked/marked.min.js",
+                "bundleName": "marked"
+              },
+              {
+                "input": "./node_modules/katex/dist/katex.min.js",
+                "bundleName": "katex"
+              },
+              {
+                "input": "./node_modules/highlightjs/highlight.pack.min.js",
+                "bundleName": "highlight"
+              },
+              {
+                "input": "./node_modules/mermaid/dist/mermaid.min.js",
+                "bundleName": "mermaid"
+              },
+              {
+                "input": "./node_modules/prettier/standalone.js",
+                "bundleName": "prettier"
+              },
+              {
+                "input": "./node_modules/prettier/parser-markdown.js",
+                "bundleName": "prettier-markdown"
+              }
+            ],
+            "allowedCommonJsDependencies": [
+              "prettier",
+              "mermaid",
+              "highlight.js",
+              "highlightjs"
+            ]
           },
           "configurations": {
             "production": {
@@ -52,7 +83,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "512kb",
-                  "maximumError": "1mb"
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
