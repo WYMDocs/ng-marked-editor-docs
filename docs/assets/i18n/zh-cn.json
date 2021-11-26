@@ -1,0 +1,9 @@
+{
+    "HELLO": "您好",
+    "HOME": "首页",
+    "EXAMPLE": "示例",
+    "SOURCECODE": "源码",
+    "ABOUT": "关于",
+    "DOCS": "文档",
+    "APPNAME": "基于Angular开发的Markdown编辑器"
+}
