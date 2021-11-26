@@ -1,0 +1,3 @@
+[![GitHub stars](https://img.shields.io/github/stars/JackYumg/ng-plugins?style=social)](https://github.com/JackYumg/ng-plugins/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/JackYumg/ng-plugins?style=social)](https://github.com/JackYumg/ng-plugins/issues)
+[![GitHub forks](https://img.shields.io/github/forks/JackYumg/ng-plugins?style=social)](https://github.com/JackYumg/ng-plugins/network)
