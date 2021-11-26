@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=./ --aot=true --build-optimizer=true --optimization=true --common-chunk=false --stats-json=true & npm run bundle-report",
+    "build": "ng build --prod --base-href=./ --aot=true --build-optimizer=true --optimization=true --common-chunk=false --stats-json=true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
